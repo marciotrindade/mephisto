@@ -1,0 +1,5 @@
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
+RewriteRule ^/$     /cache/index.html [QSA,L]
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
+RewriteRule ^/(.+)/$ /cache/$1.html   [QSA,L]

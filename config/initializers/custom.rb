@@ -8,7 +8,7 @@
 Site.multi_sites_enabled = true
 
 # shouldn't need to set the host, it's set automatically
-UserMailer.default_url_options[:host] = 'localhost:3000'
+UserMailer.default_url_options[:host] = 'localhost'
 UserMailer.mail_from = 'webmaster@localhost'
 
 # defaults to ImageScience, then RMagick, then nothing
