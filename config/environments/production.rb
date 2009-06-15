@@ -20,3 +20,13 @@ config.action_controller.perform_caching             = true
 
 # Enable if you want to host multiple sites on this app
 # Site.multi_sites_enabled = true
+
+unless '1.9'.respond_to?(:force_encoding)
+  String.class_eval do
+    begin
+         remove_method :chars
+    rescue NameError
+      # OK
+  end
+  end
+end
