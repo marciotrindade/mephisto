@@ -11,3 +11,5 @@ script/process/inspector
 themes/site-1/*
 vendor/plugins/filtered_column_gist_macro/*
 vendor/rails/*
+public/cache/*
+tmp/*
