@@ -1,0 +1,26 @@
+Code Highlighter Macro For Mephisto
+-----------------------------------
+
+A small plugin that provides a filter to wrap code that will then be picked up by CodeHighlighter for client side highlighting.
+
+
+Usage
+-----
+
+Ensure the code highlighter scripts are installed into your javascripts dir.  After this, add the javascript include statements into your layout:
+
+  {{ 'code_highlighter' | javascript }}
+  {{ 'javascript' | javascript }} <!-- one of these for each language you want to support -->
+
+Ruby, JavaScript, HTML and CSS are included but you can write you own grammars easily.
+
+Then in your posts do:
+
+   <filter:jscode lang="javascript">document.someScriptThing = "BOO"</filter:jscode>
+
+
+
+Credits
+-------
+
+(C) Dan Webb 2006 (dan@danwebb.net) Licensed under a MIT Licence.

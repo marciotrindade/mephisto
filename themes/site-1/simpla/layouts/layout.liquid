@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>{{ site.title }} {% if article %} {{ article.title }} {% else %} {{ site.subtitle }} {% endif %}</title>
+	<meta name="verify-v1" content="UyJrXMraJdPu8Mmk3aauo6QTxKm0Bb2wdwF39W1i3pY=" />
+	<meta name="generator" content="Mephisto" />
+	<meta name="description" content="Dicas para que você possa solucionar problemas que possam aparecer em seus projetos. Estudos de projetos que obtiveram êxitos." />
+	<meta name="keywords" content="Marcio , Trindade , marciotrindade, CakePHP, Ruby, Rails, RoR, Ruby on Rails, jQuery, HTML, CSS, Code, Open Source" />
+	{{ 'main' | stylesheet }}
+	{{ 'gist' | stylesheet }}
+
+	<script type="text/javascript" src="http://www.google-analytics.com/ga.js"></script>
+	
+	<link rel="alternate" type="application/atom+xml" title="Marcio Trindade" href="http://feeds2.feedburner.com/marciotrindade"/>
+</head>
+
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1><a href="/">{{ site.title }}</a></h1>
+			<p class="description">{{ site.subtitle }}</p>
+			<a href="http://feeds.feedburner.com/marciotrindade" id="rss"><img src="/images/rss.jpg" width="16" height="16" alt="RSS" title="RSS" border="0" /></a>
+		</div>
+		<div id="container">
+			<div id="content">
+				{{ content_for_layout }}
+			</div>
+			<div id="sidebar">
+				<h2>Search</h2>
+				<form method="get" id="sform" action="/search">
+					<input type="text" id="q" value="" name="q" size="20" />
+					<input type="submit" value="Buscar" />
+				</form>
+				{% if site.page_sections.size > 0 %}
+					<h2>Pages</h2>
+					<ul>
+						{% for page in site.page_sections %}<li>{{ page | link_to_section }}</li>{% endfor %}
+					</ul>
+				{% endif %}
+				<h2>Categories</h2>
+				<ul>
+					{% for category in site.blog_sections %}<li>{{ category | link_to_section	 }}</li>{% endfor %}
+				</ul>
+				<h2>Links</h2>
+				<ul>
+					<li><a href="http://www.nomedojogo.com/">Carlos Brando</a></li>
+					<li><a href="http://www.cesarschneider.net/">Cesar Schneider</a></li>
+					<li><a href="http://www.webtrin.net">Curriculum</a></li>
+					<li><a href="http://www.mouseoverstudio.com/blog">Diego Carrion</a></li>
+					<li><a href="http://www.akitaonrails.com/">Fabio Akita</a></li>
+					<li><a href="http://www.philipecasarotte.com.br/works">Philipe Casarotte</a></li>
+					<li><a href="http://blog.shadowmaru.org/">Ricardo Yasuda</a></li>
+					<li><a href="http://www.thiagopaes.com.br/">Thiago Paes</a></li>
+					<li><a href="http://www.wylkon.com.br/">Wylkon Cardoso</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-1964688-4");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+	
+</body>
+</html>

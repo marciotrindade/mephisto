@@ -1,0 +1,6 @@
+require 'fileutils'
+
+desc "Install scripts to javascripts directory"
+task :install => :environment do
+  FileUtils.cp Dir[File.dirname(__FILE__) + '/assets/*.js'], RAILS_ROOT + "/themes/site-1/javascripts/"
+end

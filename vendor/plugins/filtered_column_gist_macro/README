@@ -1,0 +1,15 @@
+## Gist Macro For Mephisto
+
+A plugin that use gist URL to show a formated code.
+
+
+## Usage
+
+Then in your posts do:
+
+        <filter:gist>http://gist.github.com/34971</filter:gist>
+
+
+## Credits
+
+Marcio Trindade (marciotrindade@gmail.com) Licensed under a MIT Licence.

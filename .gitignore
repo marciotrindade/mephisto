@@ -1,15 +1,10 @@
 .DS_Store
 config/database.yml
 log/*
-public/images/*
-public/javascripts/*
 public/plugin_assets/*
-public/stylesheets/*
 script/dbconsole
 script/performance/request
 script/process/inspector
-themes/site-1/*
-vendor/plugins/filtered_column_gist_macro/*
 vendor/rails/*
 public/cache/*
 tmp/*

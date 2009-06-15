@@ -1,0 +1,11 @@
+class CodeHighlighterMacro < FilteredColumn::Macros::Base
+  class << self
+    include ActionView::Helpers::TagHelper
+    
+    def filter(attributes, inner_text='', text='')
+      code_block = content_tag(:code, h(inner_text.strip), :class => attributes[:lang])     
+      
+      attributes[:inline] ? code_block : content_tag(:pre, code_block)
+    end
+  end
+end
