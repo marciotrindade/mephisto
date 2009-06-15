@@ -1,5 +1,6 @@
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
-RewriteRule ^/$     /cache/index.html [QSA,L]
+RewriteEngine on
 
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^/$     /cache/index.html [QSA,L]
 RewriteRule ^/(.+)/$ /cache/$1.html   [QSA,L]
