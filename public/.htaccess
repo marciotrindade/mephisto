@@ -1,6 +1,10 @@
-RewriteEngine on
-
-RewriteCond %{SCRIPT_FILENAME} !-f
-RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule ^/$     /cache/index.html [QSA,L]
-RewriteRule ^/(.+)/$ /cache/$1.html   [QSA,L]
+# This directive will look in public/ for cached files
+RewriteRule ^$ index.html [QSA]
+RewriteRule ^([^.]+)$ $1.html [QSA]
+# This directive will look in public/cache/ for cached files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule !^cache/(.*) - [C]
+RewriteRule ^(.*)$ cache/$1 [QSA]
+# If nothing is found, send to rails
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ dispatch.fcgi [QSA,L]
